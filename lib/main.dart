@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 
 main(){
-  runApp(
-    Container(
-      child: Center(
-        child: Text(
-          'Hello, World!',
-          textDirection: TextDirection.ltr,
-          style: TextStyle(fontSize: 50,
-          color: Colors.blue,),
-        )
-      )
-    ),
-  );
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Aprendendo Flutter'),
+        ),
+        body: Center(
+          child: Text('Hello, Flutter!'),
+        ),
+      ),
+    );
+  }
 }
