@@ -14,7 +14,8 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: Text('Página Inicial'),
+         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
            
       body: Center(
