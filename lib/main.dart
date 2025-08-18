@@ -1,46 +1,9 @@
+import 'package:aprendendo_flutter/app_widget.dart';
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(MyApp(title: 'Projeto Flutter'));
+  runApp(AppWidget());
 }
 
-class MyApp extends StatelessWidget {
-  final String title;
 
-  const MyApp({super.key, required this.title});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.indigo),
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  @override
-  State<HomePage> createState() {
-    return HomePageState();
-  }
-}
-
-class HomePageState extends State<HomePage> {
-  int counter = 0;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: GestureDetector(
-          child: Text('Contador: $counter'),
-          onTap: () {
-            setState(() {
-              counter++;
-            });
-          },
-        ),
-      ),
-    );
-  }
-}
