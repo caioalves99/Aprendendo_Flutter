@@ -18,18 +18,18 @@ class HomePageState extends State<HomePage> {
          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
            
-      body: Center(
-        child: GestureDetector(
-          child: 
-            Text('Contador: $counter',
-              style: TextStyle(fontSize: 30, color: Colors.indigo)
-            ),
-            onTap: () {
-              setState(() {
-            counter++;
-          });
-            },
-        ),
+      body: Container(
+        height: 200,
+        width: 200,
+        color: Colors.blue,
+          
+        child: Center(
+          child: Container(
+            height: 100,
+            width: 100,
+            color: Colors.tealAccent,
+          )
+      )
       ),
 
       floatingActionButton: FloatingActionButton(
