@@ -20,8 +20,10 @@ class HomePageState extends State<HomePage> {
            
       body: Center(
         child: GestureDetector(
-          child: Text('Contador: $counter',
-                  style: TextStyle(fontSize: 30, color: Colors.indigo)),
+          child: 
+            Text('Contador: $counter',
+              style: TextStyle(fontSize: 30, color: Colors.indigo)
+            ),
             onTap: () {
               setState(() {
             counter++;
