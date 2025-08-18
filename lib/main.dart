@@ -12,10 +12,35 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.indigo,),
-      home: Container(
-        child: Center(child: Text('Projeto teste')),
-      )
+      theme: ThemeData(primarySwatch: Colors.indigo),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() {
+    return HomePageState();
+  }
+}
+
+class HomePageState extends State<HomePage> {
+  int counter = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(
+        child: GestureDetector(
+          child: Text('Contador: $counter'),
+          onTap: () {
+            setState(() {
+              counter++;
+            });
+          },
+        ),
+      ),
     );
   }
 }
