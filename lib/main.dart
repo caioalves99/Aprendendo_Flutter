@@ -11,14 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text(
-          title,
-          textDirection: TextDirection.ltr,
-          style: TextStyle(fontSize: 50, color: Colors.red),
-        ),
-      ),
+    return MaterialApp(
+      theme: ThemeData(primarySwatch: Colors.indigo,),
+      home: Container(
+        child: Center(child: Text('Projeto teste')),
+      )
     );
   }
 }
