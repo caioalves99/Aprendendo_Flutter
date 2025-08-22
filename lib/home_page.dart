@@ -2,6 +2,8 @@ import 'package:aprendendo_flutter/app_controller.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   State<HomePage> createState() {
     return HomePageState();
@@ -17,16 +19,11 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Página Inicial'),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        actions: [CustomSwitch()],
       ),
 
       body: Center(
-        child: Switch(
-          value: AppController.instance.isDartTheme,
-          onChanged: (value) {
-            AppController.instance.changeTheme();
-          },
-        ),
+        child: CustomSwitch(),
       ),
 
       floatingActionButton: FloatingActionButton(
@@ -37,6 +34,21 @@ class HomePageState extends State<HomePage> {
           });
         },
       ),
+    );
+  }
+}
+
+class CustomSwitch extends StatelessWidget {
+  const CustomSwitch({super.key});
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Switch(
+      value: AppController.instance.isDartTheme,
+      onChanged: (value) {
+        AppController.instance.changeTheme();
+      },
     );
   }
 }
