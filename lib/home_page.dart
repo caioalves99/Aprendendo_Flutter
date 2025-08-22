@@ -18,12 +18,24 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('Página Inicial'),
         actions: [CustomSwitch()],
       ),
 
-      body: Center(
-        child: CustomSwitch(),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text('Quantidade de vezes que clicou no botão: $counter', 
+              style: TextStyle(fontSize: 20),
+            ),
+            CustomSwitch(),
+          ],
+        ),
       ),
 
       floatingActionButton: FloatingActionButton(
