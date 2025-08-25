@@ -16,9 +16,12 @@ class HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return 
+    Scaffold(
+      
+
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('Página Inicial'),
         actions: [CustomSwitch()],
       ),
@@ -33,7 +36,38 @@ class HomePageState extends State<HomePage> {
             Text('Quantidade de vezes que clicou no botão: $counter', 
               style: TextStyle(fontSize: 20),
             ),
+            
+            Container(
+              height: 10,
+            ),
+            
             CustomSwitch(),
+            
+            Container(
+              height: 50,
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.lightBlue,
+                ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.amber,
+                ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.pink,
+                ),
+              ],
+            )
           ],
         ),
       ),

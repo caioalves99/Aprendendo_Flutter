@@ -12,12 +12,28 @@ class AppWidget extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           theme: ThemeData(
-           primarySwatch: Colors.red,
-          
-            brightness: AppController.instance.isDartTheme 
-              ? Brightness.dark 
-              : Brightness.light,
+            brightness: Brightness.light,
+            //primarySwatch: Colors.blue,
+            appBarTheme: AppBarTheme(
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.black,
+            ),
+            scaffoldBackgroundColor: Colors.white70,
+            // Adicione outras cores personalizadas aqui
           ),
+          darkTheme: ThemeData(
+            brightness: Brightness.dark,
+            //primarySwatch: Colors.cyan,
+            appBarTheme: AppBarTheme(
+              backgroundColor: Colors.black87,
+              foregroundColor: Colors.white,
+            ),
+            scaffoldBackgroundColor: Colors.black87,
+            // Adicione outras cores personalizadas aqui
+          ),
+          themeMode: AppController.instance.isDartTheme
+              ? ThemeMode.dark
+              : ThemeMode.light,
           home: HomePage(),
         );
       },
