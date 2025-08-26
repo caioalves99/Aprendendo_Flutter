@@ -35,7 +35,7 @@ class HomePageState extends State<HomePage> {
           
           children: [
             Text('Quantidade de vezes que clicou no botão: $counter', 
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 18),
             ),
             
             Container(

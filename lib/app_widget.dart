@@ -16,26 +16,31 @@ class AppWidget extends StatelessWidget {
             brightness: Brightness.light,
             //primarySwatch: Colors.blue,
             appBarTheme: AppBarTheme(
-              backgroundColor: Colors.white,
-              foregroundColor: Colors.black,
+              //backgroundColor: Colors.white,
+              //foregroundColor: Colors.black,
             ),
-            scaffoldBackgroundColor: Colors.white70,
+            scaffoldBackgroundColor: Colors.white,
             // Adicione outras cores personalizadas aqui
           ),
           darkTheme: ThemeData(
             brightness: Brightness.dark,
             //primarySwatch: Colors.cyan,
             appBarTheme: AppBarTheme(
-              backgroundColor: Colors.black87,
-              foregroundColor: Colors.white,
+              //backgroundColor: Colors.black,
+              //foregroundColor: Colors.white,
             ),
-            scaffoldBackgroundColor: Colors.black87,
+            //scaffoldBackgroundColor: Colors.black,
             // Adicione outras cores personalizadas aqui
           ),
           themeMode: AppController.instance.isDartTheme
               ? ThemeMode.dark
               : ThemeMode.light,
-          home: LoginPage(),
+          
+          initialRoute: '/',
+          routes: {
+            '/': (context) => LoginPage(),
+            '/home': (context) => HomePage(),
+          },
         );
       },
     );

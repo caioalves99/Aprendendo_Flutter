@@ -1,3 +1,4 @@
+//import 'package:aprendendo_flutter/home_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -24,38 +25,37 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextField(
-                  onChanged: (text){
+                  onChanged: (text) {
                     email = text;
                   },
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     labelText: "Email",
-                    border: OutlineInputBorder()
+                    border: OutlineInputBorder(),
                   ),
                 ),
-                
-                SizedBox(height: 20,),
-                
+
+                SizedBox(height: 20),
+
                 TextField(
-                  onChanged: (text){
+                  onChanged: (text) {
                     senha = text;
                   },
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: "Senha",
-                    border: OutlineInputBorder()
+                    border: OutlineInputBorder(),
                   ),
                 ),
-        
-                SizedBox(height: 20,),
-        
+
+                SizedBox(height: 20),
+
                 ElevatedButton(
-                  onPressed: (){
-                    if(email == 'teste@gmail.com' && senha == '123'){
-                     print('Login válido');
+                  onPressed: () {
+                    if (email == 'caio@gmail.com' && senha == '123') {
+                      Navigator.of(context).pushReplacementNamed('/home');
                     } else {
                       print("Login inválido");
-        
                     }
                   },
                   child: Text("Entrar"),
