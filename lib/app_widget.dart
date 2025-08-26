@@ -1,5 +1,6 @@
 import 'package:aprendendo_flutter/app_controller.dart';
 import 'package:aprendendo_flutter/home_page.dart';
+import 'package:aprendendo_flutter/login_page.dart';
 import 'package:flutter/material.dart';
 
 class AppWidget extends StatelessWidget {
@@ -34,7 +35,7 @@ class AppWidget extends StatelessWidget {
           themeMode: AppController.instance.isDartTheme
               ? ThemeMode.dark
               : ThemeMode.light,
-          home: HomePage(),
+          home: LoginPage(),
         );
       },
     );

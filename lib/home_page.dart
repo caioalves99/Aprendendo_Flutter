@@ -29,10 +29,9 @@ class HomePageState extends State<HomePage> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        child: ListView(
-          //mainAxisAlignment: MainAxisAlignment.center,
-          //crossAxisAlignment: CrossAxisAlignment.center,
-          scrollDirection: Axis.vertical,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           
           children: [
             Text('Quantidade de vezes que clicou no botão: $counter', 
@@ -43,25 +42,6 @@ class HomePageState extends State<HomePage> {
               height: 10,
             ),
             
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
-            CustomSwitch(),
             CustomSwitch(),
 
             Container(
