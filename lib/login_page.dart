@@ -33,42 +33,57 @@ class _LoginPageState extends State<LoginPage> {
           
                     SizedBox(height: 20),
           
-                    TextField(
-                      onChanged: (text) {
-                        email = text;
-                      },
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: InputDecoration(
-                        labelText: "Email",
-                        border: OutlineInputBorder(),
-                      ),
+                    Card(
+                      child:
+                        Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Column(
+                            children: [
+                              TextField(
+                                onChanged: (text) {
+                                  email = text;
+                                },
+                                keyboardType: TextInputType.emailAddress,
+                                decoration: InputDecoration(
+                                  labelText: "Email",
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+                                    
+                              SizedBox(height: 20),
+                                    
+                              TextField(
+                                onChanged: (text) {
+                                  senha = text;
+                                },
+                                obscureText: true,
+                                decoration: InputDecoration(
+                                  labelText: "Senha",
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+
+                              SizedBox(height: 20),
+
+                              ElevatedButton(
+                                onPressed: () {
+                                  if (email == 'caio@sub.com' && senha == '123') {
+                                    Navigator.of(context).pushReplacementNamed('/home');
+                                  } else {
+                                    print("Login inválido");
+                                  }
+                                },
+                                child: Text("Entrar"),
+                              ),
+                              
+                            ],
+                          ),
+                        ),
                     ),
           
                     SizedBox(height: 20),
           
-                    TextField(
-                      onChanged: (text) {
-                        senha = text;
-                      },
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        labelText: "Senha",
-                        border: OutlineInputBorder(),
-                      ),
-                    ),
-          
-                    SizedBox(height: 20),
-          
-                    ElevatedButton(
-                      onPressed: () {
-                        if (email == 'caio@sub.com' && senha == '123') {
-                          Navigator.of(context).pushReplacementNamed('/home');
-                        } else {
-                          print("Login inválido");
-                        }
-                      },
-                      child: Text("Entrar"),
-                    ),
+                    
                   ],
                 ),
               ),
