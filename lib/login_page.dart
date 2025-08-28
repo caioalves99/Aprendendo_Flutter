@@ -34,6 +34,7 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(height: 20),
           
                     Card(
+                      color: Colors.white.withOpacity(0.7),
                       child:
                         Padding(
                           padding: const EdgeInsets.all(12.0),
