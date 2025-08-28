@@ -24,6 +24,15 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+
+                Container(
+                  width: 300,
+                  height: 300,
+                  child: Image.asset('assets/images/logo.png'),
+                ),
+
+                SizedBox(height: 20),
+
                 TextField(
                   onChanged: (text) {
                     email = text;
@@ -52,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
 
                 ElevatedButton(
                   onPressed: () {
-                    if (email == 'caio@gmail.com' && senha == '123') {
+                    if (email == 'caio@sub.com' && senha == '123') {
                       Navigator.of(context).pushReplacementNamed('/home');
                     } else {
                       print("Login inválido");

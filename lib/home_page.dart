@@ -26,7 +26,7 @@ class HomePageState extends State<HomePage> {
         actions: [CustomSwitch()],
       ),
 
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         height: double.infinity,
         child: Column(
