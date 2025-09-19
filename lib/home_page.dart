@@ -19,6 +19,41 @@ class HomePageState extends State<HomePage> {
     return 
     Scaffold(
       
+      drawer: Drawer(
+        child: Column(
+          children: [
+
+            UserAccountsDrawerHeader(
+              currentAccountPicture: ClipRRect(
+                borderRadius: BorderRadius.circular(50),
+                child: Image.network(
+                  "https://static-alter1.vidnoz.com/system/asset/202408/66beeabb5fa40.jpg"),
+              ),
+              accountName: Text("Caio"),
+              accountEmail: Text("caio@gmail.com"),
+            ),
+
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("Início"),
+              subtitle: Text("Tela de Início"),
+              onTap: () {
+                print("Home");
+              },
+            ),
+
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("Logout"),
+              subtitle: Text("Finalizara sessão"),
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed('/');
+              },
+            )
+
+          ],
+        )
+      ),
 
       appBar: AppBar(
         //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -42,7 +77,7 @@ class HomePageState extends State<HomePage> {
               height: 10,
             ),
             
-            CustomSwitch(),
+            //CustomSwitch(),
 
             Container(
               height: 50,

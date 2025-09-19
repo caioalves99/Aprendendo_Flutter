@@ -12,7 +12,7 @@ class _LoginPageState extends State<LoginPage> {
   String email = "";
   String senha = "";
 
-  //@override
+  @override
   Widget _body() {
     return Center(
       child: SingleChildScrollView(
@@ -26,11 +26,14 @@ class _LoginPageState extends State<LoginPage> {
                 height: 300,
                 child: Image.asset('assets/images/logo.png'),
               ),
+              
               SizedBox(height: 20),
+              
               Card(
-                color: Colors.white.withOpacity(0.9),
+                //color: Colors.white.withOpacity(0.9),
+                
                 child: Padding(
-                  padding: const EdgeInsets.all(12.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
                       TextField(
@@ -43,37 +46,60 @@ class _LoginPageState extends State<LoginPage> {
                           border: OutlineInputBorder(),
                         ),
                       ),
-                      SizedBox(height: 20),
-                      TextField(
-                        onChanged: (text) {
-                          senha = text;
-                        },
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          labelText: "Senha",
-                          border: OutlineInputBorder(),
-                        ),
-                      ),
-                      SizedBox(height: 20),
-                      ElevatedButton(
-                        onPressed: () {
-                          if (email == 'caio@sub.com' && senha == '123') {
-                            Navigator.of(context).pushReplacementNamed('/home');
-                          } else {
-                            print("Login inválido");
-                          }
-                        },
-                        child: Text("Entrar"),
-                      ),
                     ],
                   ),
                 ),
-              ),
+              ),  
+                
               SizedBox(height: 20),
+                        
+                Card(
+                  child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              TextField(
+                                onChanged: (text) {
+                                  senha = text;
+                                },
+                                obscureText: true,
+                                decoration: InputDecoration(
+                                  labelText: "Senha",
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                ),
+                      
+                      SizedBox(height: 20),
+                      
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {
+                                if (email == 'caio@gmail.com' && senha == '123') {
+                                  Navigator.of(context).pushReplacementNamed('/home');
+                                } else {
+                                  print("Login inválido");
+                                }
+                              },
+                              child: Text("Entrar"),
+                            ),
+                          ],
+                        ),
+                ),
+
+
+              SizedBox(height: 20),
+
             ],
           ),
         ),
-      ), 
+      ),
     );
   }
 
